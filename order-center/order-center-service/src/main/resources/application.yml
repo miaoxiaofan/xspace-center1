@@ -1,0 +1,17 @@
+server:
+  port: 18181
+
+spring:
+  profiles:
+    include: dubbo,datasource,mybatis
+  application:
+    name: order-center
+
+
+
+
+logging:
+  config: classpath:logback-config.xml
+
+
+

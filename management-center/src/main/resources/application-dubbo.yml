@@ -1,0 +1,21 @@
+#生產和消費者配製
+dubbo:
+  application:
+    name: market-service
+    environment: develop
+  protocol:
+    port: 20880
+    threadpool: fixed
+    threads: 200
+  registry:
+    address: 10.32.10.130:2181,132.224.133.10:2181
+    file: dubbo-registry-cache/market${replicas.id:}.cache
+  provider:
+    timeout: 30000
+    connections: 5
+    group: devGroup
+    version: 1.0.0
+    retries: 0
+  consumer:
+    check: false
+    group: devGroup

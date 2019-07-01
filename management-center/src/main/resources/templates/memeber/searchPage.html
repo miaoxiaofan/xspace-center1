@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <script src="../../static/js/webjars/jquery/3.2.0/jquery.min.js" th:src="@{/js/webjars/jquery/3.2.0/jquery.min.js}"></script>
+    <script src="../../static/js/steppage1.js" th:src="@{/js/steppage1.js}"></script>
+    <!--基础js-end -->
+    <script type="text/javascript">
+        var WEB_ROOT = '[[${#httpServletRequest.contextPath}]]';
+    </script>
+</head>
+
+<body>
+<div class="header">
+    <div class="logo">
+    </div>
+    <div class="brand">权益中心</div>
+    <div class="welcome">欢迎登录权益中心</div>
+</div>
+<div class="main">
+    <div class="main-content">
+        <div class="login-form">
+            <div class="title">账户登录</div>
+            <div class="error-wrap">
+                <div class="error-text">用户名不存在</div>
+            </div>
+            <div class="login-row">
+                <input type="text" id="username" placeholder="登录账号">
+            </div>
+            <div class="login-row">
+                <input type="password" id="password" placeholder="登录密码">
+            </div>
+            <div class="login-row">
+                <input type="text" id="verifyCode" placeholder="验证码" maxlength="4">
+                <a class="refresh"></a>
+            </div>
+            <div class="check-row">
+                <input type="checkbox" />记住用户密码
+                <a class="forget">忘记密码？</a>
+            </div>
+            <div class="btn-row">
+                <button class="btn" onclick="valide1()">登录</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+
+</html>

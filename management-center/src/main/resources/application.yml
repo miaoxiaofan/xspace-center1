@@ -1,0 +1,37 @@
+server:
+  port: 18188
+
+spring:
+  profiles:
+    include: dubbo,datasource
+  thymeleaf:
+    enabled: true
+    cache: false
+    suffix: .html
+    encoding: UTF-8
+    prefix: classpath:/templates/
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: 1429425727
+      validationQuery: select 1
+      maxActive: 20
+      minIdle: 1
+      initialSize: 4
+      testOnReturn: false
+      testWhileIdle: true
+      testOnBorrow: true
+      logAbandoned: false
+      timeBetweenEvictionRunsMillis: 600000
+      minEvictableIdleTimeMillis: 600000
+      poolPreparedStatements: true
+      removeAbandoned: true
+      driver-class-name: com.mysql.jdbc.Driver
+      name: es_test
+  elasticsearch:
+    jest:
+      uris: http://192.168.0.141:9200
+logging:
+  file: /home/web/logs/
+
