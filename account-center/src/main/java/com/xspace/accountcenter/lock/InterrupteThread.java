@@ -1,5 +1,8 @@
 package com.xspace.accountcenter.lock;
 
+import java.util.Hashtable;
+import java.util.TreeMap;
+
 /**
  * @author wmiao
  * @description
@@ -40,6 +43,11 @@ public class InterrupteThread {
         },"B");
         b.start();
 
+   String aa="";
 
+   char  aaaa ='a';
+
+        Hashtable  hashtable=new Hashtable();
+        TreeMap treeMap=new TreeMap();
     }
 }

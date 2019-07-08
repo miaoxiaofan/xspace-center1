@@ -21,4 +21,5 @@ public class MyCallable implements Callable<CommonRsp> {
         System.out.println(System.currentTimeMillis()+":callable 任务结束");
         return commonRsp;
     }
+
 }
