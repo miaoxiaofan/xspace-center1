@@ -1,6 +1,6 @@
 package com.xspace.ordercenter.api;
 
-import com.xspace.ordercenter.entity.Employee;
+import com.xspace.ordercenter.req.EmployeeDto;
 
 import java.util.List;
 
@@ -11,6 +11,6 @@ import java.util.List;
  */
 
 public interface FindEmployeeApi {
-    List<Employee> findEmployeeList();
-    List<Employee> findEmployeeBy(Employee employee);
+    List<EmployeeDto> findEmployeeList();
+    List<EmployeeDto> findEmployeeBy(EmployeeDto employee);
 }

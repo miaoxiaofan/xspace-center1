@@ -3,6 +3,9 @@ package com.xspace.management.controller;
 import com.xspace.management.vo.BaseResp;
 import com.xspace.management.vo.PersonReqDto;
 import com.xspace.management.vo.SimpleDto;
+import com.xspace.ordercenter.api.FindEmployeeApi;
+
+import com.xspace.ordercenter.req.EmployeeDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +28,10 @@ import java.util.Random;
 @RequestMapping("/memeber")
 public class MemberController {
 
-
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+   @Autowired
+   private FindEmployeeApi findEmployeeApi;
 
     /**
      * 进入商户联盟查询页面
@@ -97,6 +101,20 @@ public class MemberController {
         }
         return stringBuilder.toString();
     }
+    /**
+     * 进入商户联盟查询页面
+     */
+    @RequestMapping(value = "/searchEmployee")
+    @ResponseBody
+    public List<EmployeeDto> searchEmployee(EmployeeDto employee) {
+
+        logger.info("查询客户信息");
+
+        List<EmployeeDto> result=findEmployeeApi.findEmployeeBy(employee);
+        return result;
+    }
+
+
 
 
 }

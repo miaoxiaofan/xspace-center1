@@ -10,13 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>order-center-api</artifactId>
-    <dependencies>
-        <dependency>
-            <groupId>com.xspace</groupId>
-            <artifactId>order-center-service</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-    </dependencies>
 
 
 </project>

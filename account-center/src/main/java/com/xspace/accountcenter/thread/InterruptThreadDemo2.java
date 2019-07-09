@@ -2,7 +2,7 @@ package com.xspace.accountcenter.thread;
 
 /**
  * @author wmiao
- * @description
+ * @description thread 线程interrupte 方法 ,子线程堵塞情况示例
  * @date 2019/7/8
  */
 

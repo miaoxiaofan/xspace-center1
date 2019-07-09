@@ -2,7 +2,7 @@ package com.xspace.accountcenter.lock;
 
 /**
  * @author wmiao
- * @description
+ * @description  死锁简单示例
  * @date 2019/7/2
  */
 

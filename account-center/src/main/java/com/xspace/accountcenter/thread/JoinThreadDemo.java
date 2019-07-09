@@ -2,7 +2,7 @@ package com.xspace.accountcenter.thread;
 
 /**
  * @author wmiao
- * @description
+ * @description   join 方法   A线程 调用 B.join ；直到B线程结束，A线程一直阻塞 。
  * @date 2019/7/8
  */
 

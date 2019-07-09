@@ -2,7 +2,7 @@ package com.xspace.accountcenter.thread;
 
 /**
  * @author wmiao
- * @description
+ * @description  线程优先级示例
  * @date 2019/6/24
  */
 

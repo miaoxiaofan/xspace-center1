@@ -7,7 +7,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @author wmiao
- * @description
+ * @description  读写锁简单demo
  * @date 2019/6/26
  */
 

@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service;
 
-import com.xspace.ordercenter.api.FindEmployeeApi;
 import com.xspace.ordercenter.entity.Employee;
+import com.xspace.ordercenter.req.EmployeeDto;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import java.util.List;
 
 public interface FindEmployeeService  {
 
-     List<Employee> findEmployeeList()  ;
+     List<EmployeeDto> findEmployeeList()  ;
 
-     List<Employee> findEmployeeBy(Employee employee);
+     List<EmployeeDto> findEmployeeBy(EmployeeDto employee);
 
 }

@@ -4,7 +4,7 @@ import java.util.concurrent.*;
 
 /**
  * @author wmiao
- * @description
+ * @description   callable 线程任务 ，future调用  cancle()  ,抛出 java.util.concurrent.CancellationException
  * @date 2019/7/8
  */
 
@@ -31,7 +31,7 @@ public class InterruptCallableDemo1 implements Callable<String>{
                try {
                    Thread.sleep(500);
                    System.out.println("取消任务");
-                   future.cancel(false);
+                   future.cancel(true);
                } catch (InterruptedException e) {
                    System.out.println("-------->" +e);
                   ;

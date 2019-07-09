@@ -24,10 +24,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<dubbo.version>2.5.3</dubbo.version>
+		<dubbo.version>2.6.4</dubbo.version>
 		<zkclient.version>0.10</zkclient.version>
 		<lombok.version>1.18.8</lombok.version>
-		<spring-boot.version>2.1.4.RELEASE</spring-boot.version>
+		<spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+		<mybatis-spring-boot-starter.version>2.0.1</mybatis-spring-boot-starter.version>
 	</properties>
 
 
@@ -53,11 +54,11 @@
 			<artifactId>spring-session-core</artifactId>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+		</dependency>-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>

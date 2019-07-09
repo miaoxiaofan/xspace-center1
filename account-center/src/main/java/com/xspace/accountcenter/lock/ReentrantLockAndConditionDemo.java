@@ -5,7 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author wmiao
- * @description
+ * @description  重入锁 等待与唤醒 demo
  * @date 2019/6/25
  */
 
