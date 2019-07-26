@@ -3,7 +3,7 @@ dubbo:
     name: xspace-order
     environment: develop
   protocol:
-    port: 20881
+    port: 20882
     threadpool: fixed
     threads: 200
     payload: 15728640

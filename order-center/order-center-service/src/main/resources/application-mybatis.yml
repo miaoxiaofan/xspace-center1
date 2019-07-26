@@ -1,6 +1,6 @@
 mybatis:
-  mapper-locations: classpath:mapping/*.xml         #配置映射文件位置，classpath指resources
-  type-aliases-package: com.zab.mybatis.beans      #实体类所在位置
+  mapper-locations: classpath:mybatis/mapper/*.xml         #配置映射文件位置，classpath指resources
+  type-aliases-package: com.xspace.ordercenter.dao      #实体类所在位置
   configuration:                                    #打印sql到控制台
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 

@@ -38,6 +38,8 @@ public interface EmployeeMapper {
      * @mbg.generated
      */
     List<Employee> selectAll();
+
+
     List<EmployeeDto> selectA();
 
     /**

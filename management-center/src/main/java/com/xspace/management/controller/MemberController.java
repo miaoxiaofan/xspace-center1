@@ -1,5 +1,7 @@
 package com.xspace.management.controller;
 
+import com.xspace.management.service.MemberService;
+import com.xspace.management.service.PayService;
 import com.xspace.management.vo.BaseResp;
 import com.xspace.management.vo.PersonReqDto;
 import com.xspace.management.vo.SimpleDto;
@@ -30,8 +32,12 @@ public class MemberController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-   @Autowired
-   private FindEmployeeApi findEmployeeApi;
+
+    @Autowired
+    private MemberService memberService;
+    @Autowired
+    private PayService  payService;
+
 
     /**
      * 进入商户联盟查询页面
@@ -101,6 +107,7 @@ public class MemberController {
         }
         return stringBuilder.toString();
     }
+
     /**
      * 进入商户联盟查询页面
      */
@@ -110,10 +117,86 @@ public class MemberController {
 
         logger.info("查询客户信息");
 
-        List<EmployeeDto> result=findEmployeeApi.findEmployeeBy(employee);
+        List<EmployeeDto> result = memberService.searchEmployee(employee);
+
         return result;
     }
 
+
+
+    /**
+     * 进入商户联盟查询页面
+     */
+    @RequestMapping(value = "/memberCount")
+    @ResponseBody
+    public int memberCount( int   num)  {
+
+        logger.info("计数");
+
+        try {
+            return   payService.minGoodsnum(num);
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return 10000;
+    }
+
+    /**
+     * 进入商户联盟查询页面
+     */
+    @RequestMapping(value = "/memberTest")
+    @ResponseBody
+    public int memberTest()  {
+
+        logger.info("计数");
+
+        try {
+            return   payService.memberTest();
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return 10000;
+    }
+
+
+    /**
+     * 进入商户联盟查询页面
+     */
+    @RequestMapping(value = "/TimeOutTest")
+    @ResponseBody
+    public String TimeOutTest(Integer type)  {
+
+        logger.info("type:{}",type);
+        String   a="";
+        if(type==2){
+            return  payService.memberTest2();
+        }
+
+        try {
+          a=  payService.memberTest1();
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        }
+        return a;
+    }
+
+
+    /**
+     * 进入商户联盟查询页面
+     */
+    @RequestMapping(value = "/aceptTimeOutTest")
+    @ResponseBody
+    public String aceptTimeOutTest(String name)  {
+
+        logger.info("aceptTimeOutTest:");
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return name+":1111";
+    }
 
 
 

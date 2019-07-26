@@ -21,6 +21,7 @@ import java.util.List;
 public class FindEmployeeServiceImpl implements FindEmployeeService {
 
      private Logger logger = LoggerFactory.getLogger(this.getClass());
+
      @Autowired
      private EmployeeMapper employeeMapper;
 
@@ -33,6 +34,11 @@ public class FindEmployeeServiceImpl implements FindEmployeeService {
      @Override
      public List<EmployeeDto> findEmployeeBy(EmployeeDto employee) {
           logger.info("查询11");
+          try {
+               Thread.sleep(10000);
+          } catch (InterruptedException e) {
+               e.printStackTrace();
+          }
           return  employeeMapper.selectA();
      }
 }
