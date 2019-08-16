@@ -1,0 +1,22 @@
+package com.xspace.ordercenter.service;
+
+
+
+import com.unicom.js.ibo.infocenter.rsp.BasePercentageRsp;
+import com.unicom.js.ibo.infocenter.rsp.IndustryTypeRsp;
+
+import java.util.List;
+
+/**
+ * @author wmiao
+ * @description
+ * @date 2019/7/30
+ */
+
+public interface IndustryService {
+    List<BasePercentageRsp> parkIndustryList(String searchCode);
+
+    List<BasePercentageRsp> buildIndustryList(String parkCode, String buildCode);
+
+    List<IndustryTypeRsp> findIndustryType();
+}

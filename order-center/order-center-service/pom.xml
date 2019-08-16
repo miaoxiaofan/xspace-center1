@@ -4,93 +4,52 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<artifactId>order-center</artifactId>
-		<groupId>com.xspace</groupId>
+		<groupId>com.xspace.order</groupId>
 		<version>1.0.0</version>
 	</parent>
-	<groupId>com.xspace</groupId>
+
 	<artifactId>order-center-service</artifactId>
-	<version>1.0.0</version>
 	<name>order-center-service</name>
 	<description>Demo project for Spring Boot</description>
 
-
-
+	<!--子模块不得出现具体依赖版本号-->
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>2.0.1</version>
+			<groupId>io.dubbo.springboot</groupId>
+			<artifactId>spring-boot-starter-dubbo</artifactId>
+			<version>${starter-dubbo.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
 
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 
-		<!--elk日志-->
 		<dependency>
-			<groupId>net.logstash.logback</groupId>
-			<artifactId>logstash-logback-encoder</artifactId>
-			<version>5.3</version>
-		</dependency>
-		<dependency>
-			<artifactId>lsf-common</artifactId>
-			<groupId>com.lz.lsf</groupId>
-			<version>2.1.6-RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.lz.lsf</groupId>
-			<artifactId>lsf-integration</artifactId>
-			<version>2.1.6-RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.lz.lsf</groupId>
-			<artifactId>lsf-base-service</artifactId>
-			<version>2.1.6-RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.xspace</groupId>
-			<artifactId>order-center-api</artifactId>
-			<version>1.0.0</version>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>${springboot.mybatis.version}</version>
 		</dependency>
 
-		<!-- dubbo -->
-		<!-- 使用lombok实现JavaBean的get、set、toString、hashCode、equals等方法的自动生成  -->
+		<!--mysql-->
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
 		</dependency>
-		<!-- Dubbo依赖 -->
+
+		<!--dubbo-->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
-			<version>2.5.3</version>
+			<version>${dubbo.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework</groupId>
@@ -101,23 +60,35 @@
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
-			<version>3.4.8</version>
+			<version>${apache.zookeeper.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.github.sgroschupf</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.1</version>
+			<version>${zkclient.version}</version>
 		</dependency>
 
-		<!--<dependency>
-			<groupId>com.github.sgroschupf</groupId>
-			<artifactId>zkclient</artifactId>
-			<version>0.1</version>
-		</dependency>-->
-		<!--dubbo end-->
+
+		<!--redis -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-pool2</artifactId>
+			<version>${commons-pool2.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>${jackson-databind.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
+		<finalName>info-center-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

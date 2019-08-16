@@ -3,12 +3,119 @@ server:
 
 spring:
   profiles:
-    include: dubbo,datasource,mybatis
+    active: dev
   application:
     name: order-center
+  datasource:
+    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1429425727
+    validationQuery: select 1
+    maxActive: 20
+    minIdle: 1
+    initialSize: 4
+    testOnReturn: false
+    testWhileIdle: true
+    testOnBorrow: true
+    logAbandoned: false
+    timeBetweenEvictionRunsMillis: 600000
+    minEvictableIdleTimeMillis: 600000
+    poolPreparedStatements: true
+    removeAbandoned: true
+    driver-class-name: com.mysql.jdbc.Driver
+    name: es_test
 
+  cache:
+    type: redis
+    redis:
+      time-to-live: 12h #缓存超时时间
+      cache-null-values: false #是否缓存空值
+  redis:
+    host: 192.168.0.131,192.168.0.132,192.168.0.133
+    database: 0
+    port: 6379
+    password: jslt$T1xsnbsj
+    timeout: 2000s
+    lettuce:
+      shutdown-timeout: 100ms
+      pool:
+        max-active: 8
+        max-wait: 60000ms
+        max-idle: 8
+        min-idle: 0
 
+dubbo:
+  application:
+    name: xspace-order
+    environment: develop
+  protocol:
+    port: 20882
+    threadpool: fixed
+    threads: 200
+    payload: 15728640
+  registry:
+    address: 192.168.0.141:2181
+    file: dubbo-registry-cache/order{replicas.id:}.cache
+  provider:
+    timeout: 30000
+    connections: 5
+    group: devGroup
+    version: 1.0.0
+    retries: 0
+  consumer:
+    check: false
+    group: devGroup
 
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml         #配置映射文件位置，classpath指resources
+  type-aliases-package: com.xspace.ordercenter.dao      #实体类所在位置
+  configuration:                                    #打印sql到控制台
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
+pagehelper:
+    helperDialect: mysql                           #分页插件方言选择
+    reasonable: true                               #合理化参数，设为true时pageNum<=0 时会查第一页， pageNum>pages（超过总数时），会查询最后一页
+    supportMethodsArguments: true
 
+logging:
+  level:
+    com.xspace.ordercenter.dao : debug
+  file: /app/deploy/xspace/info-center/logs
 
+---
+spring:
+  profiles: dev
+
+  datasource:
+    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1429425727
+  redis:
+    host: 192.168.0.131,192.168.0.132,192.168.0.133
+    database: 0
+    port: 6379
+    password: jslt$T1xsnbsj
+    timeout: 2000s
+
+dubbo:
+  registry:
+    address: 192.168.0.141:2181
+
+---
+spring:
+  profiles: test
+
+  datasource:
+    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1429425727
+  redis:
+    host: 192.168.0.131,192.168.0.132,192.168.0.133
+    database: 0
+    port: 6379
+    password: jslt$T1xsnbsj
+    timeout: 2000s
+
+dubbo:
+  registry:
+    address: 192.168.0.141:2181

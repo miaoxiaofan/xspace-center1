@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    include: dubbo,datasource
+    active: dev
   thymeleaf:
     enabled: true
     cache: false
@@ -33,4 +33,37 @@ spring:
       uris: http://192.168.0.141:9200
 logging:
   file: /home/web/logs/
+
+#生產和消費者配製
+dubbo:
+  application:
+    name: market-service
+    environment: develop
+  protocol:
+    port: 20880
+    threadpool: fixed
+    threads: 200
+  registry:
+    address: 192.168.0.141:2181,192.168.0.142:2181,192.168.0.143:2181
+    file: dubbo-registry-cache/market${replicas.id:}.cache
+  provider:
+    timeout: 30000
+    connections: 5
+    group: devGroup
+    version: 1.0.0
+    retries: 0
+  consumer:
+    check: false
+    group: devGroup
+
+---
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1429425727
+dubbo:
+  registry:
+    address: 192.168.0.141:2181,192.168.0.142:2181,192.168.0.143:2181
 
