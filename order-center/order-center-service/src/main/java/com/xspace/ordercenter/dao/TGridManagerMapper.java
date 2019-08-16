@@ -2,7 +2,8 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TGridManager;
+import com.xspace.ordercenter.bean.TGridManager;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -46,4 +47,5 @@ public interface TGridManagerMapper {
      * @mbg.generated
      */
     int updateByPrimaryKey(TGridManager record);
+    TGridManager findByMobile(@Param("mobile") String  mobile);
 }

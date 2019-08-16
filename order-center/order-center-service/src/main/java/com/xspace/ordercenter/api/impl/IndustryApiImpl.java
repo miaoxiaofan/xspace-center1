@@ -1,11 +1,12 @@
 package com.xspace.ordercenter.api.impl;
 
-import com.unicom.js.ibo.common.enums.BaseErrorEnum;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.infocenter.api.IndustryApi;
-import com.unicom.js.ibo.infocenter.rsp.BasePercentageRsp;
-import com.unicom.js.ibo.infocenter.rsp.IndustryTypeRsp;
-import com.unicom.js.ibo.infocenter.service.IndustryService;
+
+import com.xspace.commoncenter.enums.BaseErrorEnum;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.ordercenter.api.IndustryApi;
+import com.xspace.ordercenter.rsp.BasePercentageRsp;
+import com.xspace.ordercenter.rsp.IndustryTypeRsp;
+import com.xspace.ordercenter.service.IndustryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

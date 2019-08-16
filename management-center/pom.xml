@@ -64,10 +64,10 @@
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>
-        <dependency>
+      <dependency>
             <groupId>com.xspace.order</groupId>
             <artifactId>order-center-api</artifactId>
-            <version>1.0.0</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

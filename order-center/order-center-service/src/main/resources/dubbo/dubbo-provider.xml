@@ -7,4 +7,14 @@
 
     <!-- 声明需要暴露的服务接口 -->
     <dubbo:service ref="findEmployeeApi" interface="com.xspace.ordercenter.api.FindEmployeeApi" />
+    <dubbo:service ref="cityInfoApiService" interface="com.xspace.ordercenter.api.CityInfoApi" />
+    <dubbo:service ref="tGridManagerApiService" interface="com.xspace.ordercenter.api.TGridManagerApi" />
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service ref="industryApiImpl" interface="com.xspace.ordercenter.api.IndustryApi" />
+    <dubbo:service ref="tParkService" interface="com.xspace.ordercenter.api.TParkApi" />
+    <dubbo:service ref="tBusinessApiImpl" interface="com.xspace.ordercenter.api.TBusinessApi" />
+    <dubbo:service ref="tBuildingApiImpl" interface="com.xspace.ordercenter.api.TBuildingApi" />
+    <dubbo:service ref="tCompanyApiImpl" interface="com.xspace.ordercenter.api.TCompanyApi" />
+
 </beans>

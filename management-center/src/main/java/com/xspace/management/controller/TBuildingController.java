@@ -1,10 +1,10 @@
 package com.xspace.management.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.iboapi.service.TBuildingService;
-import com.unicom.js.ibo.infocenter.rsp.BuildingIndustryStatRsp;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.management.service.TBuildingService;
+import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

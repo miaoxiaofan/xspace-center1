@@ -1,10 +1,10 @@
 package com.xspace.management.service.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.iboapi.service.TParkService;
-import com.unicom.js.ibo.infocenter.api.TParkApi;
-import com.unicom.js.ibo.infocenter.req.SearchParkReq;
-import com.unicom.js.ibo.infocenter.rsp.SearchParkRsp;
+import com.xspace.management.service.TParkService;
+import com.xspace.ordercenter.api.TParkApi;
+import com.xspace.ordercenter.req.SearchParkReq;
+import com.xspace.ordercenter.rsp.SearchParkRsp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

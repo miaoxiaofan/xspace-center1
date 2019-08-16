@@ -1,6 +1,6 @@
 package com.xspace.management.service;
 
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.ordercenter.bean.TGridManager;
 
 
 /**

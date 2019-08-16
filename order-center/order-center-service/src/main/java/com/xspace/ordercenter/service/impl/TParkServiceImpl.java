@@ -2,10 +2,10 @@ package com.xspace.ordercenter.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.infocenter.dao.TParkMapper;
-import com.unicom.js.ibo.infocenter.req.SearchParkReq;
-import com.unicom.js.ibo.infocenter.rsp.SearchParkRsp;
-import com.unicom.js.ibo.infocenter.service.TParkService;
+import com.xspace.ordercenter.dao.TParkMapper;
+import com.xspace.ordercenter.req.SearchParkReq;
+import com.xspace.ordercenter.rsp.SearchParkRsp;
+import com.xspace.ordercenter.service.TParkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

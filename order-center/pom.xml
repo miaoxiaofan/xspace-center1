@@ -9,7 +9,6 @@
         <version>1.0.0</version>
     </parent>
     <groupId>com.xspace.order</groupId>
-
     <artifactId>order-center</artifactId>
     <packaging>pom</packaging>
     <modules>

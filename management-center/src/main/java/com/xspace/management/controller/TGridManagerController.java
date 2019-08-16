@@ -1,10 +1,10 @@
 package com.xspace.management.controller;
 
 
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.utils.ApiSessionUtils;
-import com.unicom.js.ibo.iboapi.service.TGridManagerService;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.utils.ApiSessionUtils;
+import com.xspace.management.service.TGridManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

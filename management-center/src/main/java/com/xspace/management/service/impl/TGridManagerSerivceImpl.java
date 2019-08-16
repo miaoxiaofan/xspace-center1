@@ -1,8 +1,8 @@
 package com.xspace.management.service.impl;
 
-import com.unicom.js.ibo.iboapi.service.TGridManagerService;
-import com.unicom.js.ibo.usercenter.api.TGridManagerApi;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.management.service.TGridManagerService;
+import com.xspace.ordercenter.api.TGridManagerApi;
+import com.xspace.ordercenter.bean.TGridManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

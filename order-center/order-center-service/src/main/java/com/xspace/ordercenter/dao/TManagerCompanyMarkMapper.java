@@ -2,7 +2,8 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TManagerCompanyMark;
+
+import com.xspace.ordercenter.bean.TManagerCompanyMark;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package com.xspace.management.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.iboapi.service.TestService;
 import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+import com.xspace.management.service.TestService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

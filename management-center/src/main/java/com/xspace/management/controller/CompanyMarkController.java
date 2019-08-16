@@ -1,10 +1,10 @@
 package com.xspace.management.controller;
 
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.common.utils.ApiSessionUtils;
-import com.unicom.js.ibo.iboapi.service.TCompanyService;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.commoncenter.utils.ApiSessionUtils;
+import com.xspace.management.service.TCompanyService;
+import com.xspace.ordercenter.bean.TGridManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class CompanyMarkController  extends BaseController{
 
     @RequestMapping(value = "/markCompany.json")
     @ResponseBody
-    public ApiResultEntity markCompany(String companyCode,HttpServletRequest request)  {
+    public ApiResultEntity markCompany(String companyCode, HttpServletRequest request)  {
 
         TGridManager gridManager =  ApiSessionUtils.getUserInfoFromSession(request);
         if(null==gridManager){

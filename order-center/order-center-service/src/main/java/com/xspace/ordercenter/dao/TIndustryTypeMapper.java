@@ -1,6 +1,7 @@
 package com.xspace.ordercenter.dao;
 
-import com.unicom.js.ibo.infocenter.bean.TIndustryType;
+
+import com.xspace.ordercenter.bean.TIndustryType;
 
 import java.util.List;
 

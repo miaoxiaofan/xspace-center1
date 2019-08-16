@@ -1,10 +1,10 @@
 package com.xspace.ordercenter.service;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.infocenter.bean.TManagerCompanyMark;
-import com.unicom.js.ibo.infocenter.req.BuildingCompanyInfoReq;
-import com.unicom.js.ibo.infocenter.req.SearchCompanyReq;
-import com.unicom.js.ibo.infocenter.rsp.CompanyInfoRsp;
+import com.xspace.ordercenter.bean.TManagerCompanyMark;
+import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
+import com.xspace.ordercenter.req.SearchCompanyReq;
+import com.xspace.ordercenter.rsp.CompanyInfoRsp;
 
 import java.util.List;
 

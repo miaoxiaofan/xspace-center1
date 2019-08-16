@@ -1,7 +1,7 @@
 package com.xspace.management.service;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+import com.xspace.ordercenter.bean.TAreaInfo;
 
 import java.util.List;
 

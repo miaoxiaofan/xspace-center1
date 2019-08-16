@@ -1,8 +1,9 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.unicom.js.ibo.infocenter.bean.TCompanyCountOfBuilding;
-import com.unicom.js.ibo.infocenter.rsp.ParkIndustryPercentageRsp;
+
+import com.xspace.ordercenter.bean.TCompanyCountOfBuilding;
+import com.xspace.ordercenter.rsp.ParkIndustryPercentageRsp;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

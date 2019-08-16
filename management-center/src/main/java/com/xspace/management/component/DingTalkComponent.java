@@ -1,9 +1,10 @@
 package com.xspace.management.component;
 
 import com.alibaba.fastjson.JSONObject;
-import com.unicom.js.ibo.common.Env;
-import com.unicom.js.ibo.common.auth.AuthHelper;
-import com.unicom.js.ibo.common.auth.UserHelper;
+
+import com.xspace.commoncenter.Env;
+import com.xspace.commoncenter.auth.AuthHelper;
+import com.xspace.commoncenter.auth.UserHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

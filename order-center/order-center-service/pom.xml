@@ -84,11 +84,21 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson-databind.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>com.xspace.order</groupId>
+            <artifactId>order-center-api</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+		<dependency>
+			<groupId>com.xspace.order</groupId>
+			<artifactId>order-center-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 	</dependencies>
 
 	<build>
-		<finalName>info-center-${project.version}</finalName>
+		<finalName>order-center-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

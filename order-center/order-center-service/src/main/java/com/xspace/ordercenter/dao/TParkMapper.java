@@ -1,9 +1,9 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.unicom.js.ibo.infocenter.bean.TPark;
-import com.unicom.js.ibo.infocenter.req.SearchParkReq;
-import com.unicom.js.ibo.infocenter.rsp.SearchParkRsp;
+import com.xspace.ordercenter.bean.TPark;
+import com.xspace.ordercenter.req.SearchParkReq;
+import com.xspace.ordercenter.rsp.SearchParkRsp;
 
 import java.util.List;
 import java.util.Map;

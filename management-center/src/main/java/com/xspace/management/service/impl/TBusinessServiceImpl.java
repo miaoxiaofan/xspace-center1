@@ -1,8 +1,8 @@
 package com.xspace.management.service.impl;
 
-import com.unicom.js.ibo.iboapi.service.TBusinessService;
-import com.unicom.js.ibo.infocenter.api.TBusinessApi;
-import com.unicom.js.ibo.infocenter.bean.TBusiness;
+import com.xspace.management.service.TBusinessService;
+import com.xspace.ordercenter.api.TBusinessApi;
+import com.xspace.ordercenter.bean.TBusiness;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

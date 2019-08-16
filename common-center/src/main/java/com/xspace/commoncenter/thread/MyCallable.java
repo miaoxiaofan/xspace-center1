@@ -1,6 +1,6 @@
 package com.xspace.commoncenter.thread;
 
-import com.xspace.accountcenter.CommonRsp;
+
 
 import java.util.concurrent.Callable;
 
@@ -10,14 +10,13 @@ import java.util.concurrent.Callable;
  * @date 2019/6/24
  */
 
-public class MyCallable implements Callable<CommonRsp> {
+public class MyCallable implements Callable<CommonResp> {
     @Override
-    public CommonRsp call() throws Exception {
+    public CommonResp call() throws Exception {
         System.out.println(System.currentTimeMillis()+":callable 任务开启");
         Thread.sleep(1000);
-        CommonRsp commonRsp = new CommonRsp<>();
-        commonRsp.setCode("0");
-        commonRsp.setMsg("success");
+        CommonResp commonRsp=null ;
+
         System.out.println(System.currentTimeMillis()+":callable 任务结束");
         return commonRsp;
     }

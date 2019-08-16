@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.infocenter.rsp.BuildingIndustryStatRsp;
+import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
 
 public interface TBuildingService {
 

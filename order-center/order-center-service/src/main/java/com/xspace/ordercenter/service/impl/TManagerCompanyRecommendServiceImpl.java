@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service.impl;
 
-import com.unicom.js.ibo.infocenter.dao.TManagerCompanyRecommendMapper;
-import com.unicom.js.ibo.infocenter.service.TManagerCompanyRecommendService;
+import com.xspace.ordercenter.dao.TManagerCompanyRecommendMapper;
+import com.xspace.ordercenter.service.TManagerCompanyRecommendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

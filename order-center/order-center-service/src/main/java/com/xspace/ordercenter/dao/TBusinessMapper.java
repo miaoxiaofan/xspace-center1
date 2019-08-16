@@ -2,7 +2,9 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TBusiness;
+
+
+import com.xspace.ordercenter.bean.TBusiness;
 
 import java.util.List;
 

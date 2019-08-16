@@ -1,11 +1,10 @@
 package com.xspace.ordercenter.dao;
 
 
-
-import com.unicom.js.ibo.infocenter.bean.TCompany;
-import com.unicom.js.ibo.infocenter.req.BuildingCompanyInfoReq;
-import com.unicom.js.ibo.infocenter.req.SearchCompanyReq;
-import com.unicom.js.ibo.infocenter.rsp.CompanyInfoRsp;
+import com.xspace.ordercenter.bean.TCompany;
+import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
+import com.xspace.ordercenter.req.SearchCompanyReq;
+import com.xspace.ordercenter.rsp.CompanyInfoRsp;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

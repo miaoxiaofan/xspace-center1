@@ -75,4 +75,9 @@
     logo_src
     from t_grid_manager
   </select>
+  <select id="findByMobile" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, code, `name`, sex, area_code, area_name, mobile, grid_code, grid_name,logo_src
+    from t_grid_manager
+    where mobile = #{mobile,jdbcType=INTEGER}
+  </select>
 </mapper>

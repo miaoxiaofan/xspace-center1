@@ -1,8 +1,9 @@
 package com.xspace.management.controller;
 
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.iboapi.service.TBusinessService;
+
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.management.service.TBusinessService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

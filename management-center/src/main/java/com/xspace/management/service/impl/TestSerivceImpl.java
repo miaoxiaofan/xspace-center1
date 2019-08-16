@@ -1,9 +1,10 @@
 package com.xspace.management.service.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.iboapi.service.TestService;
-import com.unicom.js.ibo.usercenter.api.CityInfoApi;
-import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+
+import com.xspace.management.service.TestService;
+import com.xspace.ordercenter.api.CityInfoApi;
+import com.xspace.ordercenter.bean.TAreaInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

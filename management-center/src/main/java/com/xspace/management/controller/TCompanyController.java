@@ -2,15 +2,15 @@ package com.xspace.management.controller;
 
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.common.utils.ApiSessionUtils;
-import com.unicom.js.ibo.iboapi.service.TCompanyService;
-import com.unicom.js.ibo.iboapi.service.TGridManagerService;
-import com.unicom.js.ibo.infocenter.req.BuildingCompanyInfoReq;
-import com.unicom.js.ibo.infocenter.req.SearchCompanyReq;
-import com.unicom.js.ibo.infocenter.rsp.CompanyInfoRsp;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.commoncenter.utils.ApiSessionUtils;
+import com.xspace.management.service.TCompanyService;
+import com.xspace.management.service.TGridManagerService;
+import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
+import com.xspace.ordercenter.req.SearchCompanyReq;
+import com.xspace.ordercenter.rsp.CompanyInfoRsp;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

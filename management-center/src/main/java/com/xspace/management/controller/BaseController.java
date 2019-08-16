@@ -1,6 +1,6 @@
 package com.xspace.management.controller;
 
-import com.unicom.js.ibo.common.ApiResultEntity;
+import com.xspace.commoncenter.ApiResultEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

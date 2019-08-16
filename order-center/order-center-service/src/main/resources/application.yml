@@ -7,7 +7,7 @@ spring:
   application:
     name: order-center
   datasource:
-    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.0.134:3306/ibo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 1429425727
     validationQuery: select 1
@@ -23,7 +23,7 @@ spring:
     poolPreparedStatements: true
     removeAbandoned: true
     driver-class-name: com.mysql.jdbc.Driver
-    name: es_test
+    name: ibo
 
   cache:
     type: redis
@@ -54,7 +54,7 @@ dubbo:
     threads: 200
     payload: 15728640
   registry:
-    address: 192.168.0.141:2181
+    address: 192.168.0.131:2181,192.168.0.132:2181,192.168.0.133:2181
     file: dubbo-registry-cache/order{replicas.id:}.cache
   provider:
     timeout: 30000
@@ -87,7 +87,7 @@ spring:
   profiles: dev
 
   datasource:
-    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://192.168.0.134:3306/ibo?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 1429425727
   redis:
@@ -99,7 +99,7 @@ spring:
 
 dubbo:
   registry:
-    address: 192.168.0.141:2181
+    address: 192.168.0.131:2181,192.168.0.132:2181,192.168.0.133:2181
 
 ---
 spring:

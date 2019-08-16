@@ -1,8 +1,9 @@
 package com.xspace.ordercenter.service.impl;
 
-import com.unicom.js.ibo.infocenter.bean.TBusiness;
-import com.unicom.js.ibo.infocenter.dao.TBusinessMapper;
-import com.unicom.js.ibo.infocenter.service.TBusinessService;
+
+import com.xspace.ordercenter.bean.TBusiness;
+import com.xspace.ordercenter.dao.TBusinessMapper;
+import com.xspace.ordercenter.service.TBusinessService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

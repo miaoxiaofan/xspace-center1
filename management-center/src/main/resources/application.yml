@@ -4,33 +4,9 @@ server:
 spring:
   profiles:
     active: dev
-  thymeleaf:
-    enabled: true
-    cache: false
-    suffix: .html
-    encoding: UTF-8
-    prefix: classpath:/templates/
-  datasource:
-    url: jdbc:mysql://192.168.0.134:3306/es_test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false
-    username: root
-    password: 1429425727
-    validationQuery: select 1
-    maxActive: 20
-    minIdle: 1
-    initialSize: 4
-    testOnReturn: false
-    testWhileIdle: true
-    testOnBorrow: true
-    logAbandoned: false
-    timeBetweenEvictionRunsMillis: 600000
-    minEvictableIdleTimeMillis: 600000
-    poolPreparedStatements: true
-    removeAbandoned: true
-    driver-class-name: com.mysql.jdbc.Driver
-    name: es_test
-  elasticsearch:
-    jest:
-      uris: http://192.168.0.141:9200
+
+
+
 logging:
   file: /home/web/logs/
 
@@ -44,7 +20,7 @@ dubbo:
     threadpool: fixed
     threads: 200
   registry:
-    address: 192.168.0.141:2181,192.168.0.142:2181,192.168.0.143:2181
+    address: 192.168.0.131:2181,192.168.0.132:2181,192.168.0.133:2181
     file: dubbo-registry-cache/market${replicas.id:}.cache
   provider:
     timeout: 30000
@@ -65,5 +41,5 @@ spring:
     password: 1429425727
 dubbo:
   registry:
-    address: 192.168.0.141:2181,192.168.0.142:2181,192.168.0.143:2181
+    address: 192.168.0.131:2181,192.168.0.132:2181,192.168.0.133:2181
 

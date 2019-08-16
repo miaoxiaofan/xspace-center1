@@ -1,9 +1,7 @@
 package com.xspace.ordercenter.service;
 
-
-
-import com.unicom.js.ibo.infocenter.rsp.BasePercentageRsp;
-import com.unicom.js.ibo.infocenter.rsp.IndustryTypeRsp;
+import com.xspace.ordercenter.rsp.BasePercentageRsp;
+import com.xspace.ordercenter.rsp.IndustryTypeRsp;
 
 import java.util.List;
 

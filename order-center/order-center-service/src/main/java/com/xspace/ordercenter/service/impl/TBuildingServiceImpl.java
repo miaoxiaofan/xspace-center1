@@ -2,10 +2,10 @@ package com.xspace.ordercenter.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.infocenter.dao.TBuildingMapper;
-import com.unicom.js.ibo.infocenter.dao.TCompanyCountOfBuildingMapper;
-import com.unicom.js.ibo.infocenter.rsp.BuildingIndustryStatRsp;
-import com.unicom.js.ibo.infocenter.service.TBuildingService;
+import com.xspace.ordercenter.dao.TBuildingMapper;
+import com.xspace.ordercenter.dao.TCompanyCountOfBuildingMapper;
+import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
+import com.xspace.ordercenter.service.TBuildingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

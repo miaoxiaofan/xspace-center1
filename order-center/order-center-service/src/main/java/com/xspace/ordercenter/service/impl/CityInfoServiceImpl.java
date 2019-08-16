@@ -1,0 +1,36 @@
+package com.xspace.ordercenter.service.impl;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+import com.unicom.js.ibo.usercenter.dao.TAreaInfoMapper;
+import com.unicom.js.ibo.usercenter.service.CityInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+/**
+ * @author wmiao
+ * @description
+ * @date 2019/7/29
+ */
+@Service
+public class CityInfoServiceImpl implements CityInfoService {
+
+    @Autowired
+    private TAreaInfoMapper tAreaInfoMapper;
+    @Override
+    public List<TAreaInfo> findCityArea(TAreaInfo bean) {
+        return tAreaInfoMapper.findByCityCode(bean);
+    }
+
+    @Override
+    public PageInfo<TAreaInfo> findCityAreaByPage(TAreaInfo bean, Integer pageNum, Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+
+        List<TAreaInfo> result=tAreaInfoMapper.findByCityCode(bean);
+        PageInfo<TAreaInfo> page = new PageInfo<>(result);
+        return  page;
+    }
+}

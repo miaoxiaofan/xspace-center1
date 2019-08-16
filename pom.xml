@@ -21,7 +21,7 @@
         <module>account-center</module>
         <module>management-center</module>
         <module>common-center</module>
-        <module>order-center</module>
+      <module>order-center</module>
     </modules>
     <!--全局版本管理-->
     <properties>

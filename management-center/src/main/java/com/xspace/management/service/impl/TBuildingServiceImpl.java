@@ -1,9 +1,9 @@
 package com.xspace.management.service.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.iboapi.service.TBuildingService;
-import com.unicom.js.ibo.infocenter.api.TBuildingApi;
-import com.unicom.js.ibo.infocenter.rsp.BuildingIndustryStatRsp;
+import com.xspace.management.service.TBuildingService;
+import com.xspace.ordercenter.api.TBuildingApi;
+import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

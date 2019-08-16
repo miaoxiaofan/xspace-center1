@@ -1,11 +1,11 @@
 package com.xspace.management.service.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.iboapi.service.TCompanyService;
-import com.unicom.js.ibo.infocenter.api.TCompanyApi;
-import com.unicom.js.ibo.infocenter.req.BuildingCompanyInfoReq;
-import com.unicom.js.ibo.infocenter.req.SearchCompanyReq;
-import com.unicom.js.ibo.infocenter.rsp.CompanyInfoRsp;
+import com.xspace.management.service.TCompanyService;
+import com.xspace.ordercenter.api.TCompanyApi;
+import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
+import com.xspace.ordercenter.req.SearchCompanyReq;
+import com.xspace.ordercenter.rsp.CompanyInfoRsp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

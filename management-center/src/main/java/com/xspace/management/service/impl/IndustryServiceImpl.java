@@ -1,9 +1,9 @@
 package com.xspace.management.service.impl;
 
-import com.unicom.js.ibo.iboapi.service.IndustryService;
-import com.unicom.js.ibo.infocenter.api.IndustryApi;
-import com.unicom.js.ibo.infocenter.rsp.BasePercentageRsp;
-import com.unicom.js.ibo.infocenter.rsp.IndustryTypeRsp;
+import com.xspace.management.service.IndustryService;
+import com.xspace.ordercenter.api.IndustryApi;
+import com.xspace.ordercenter.rsp.BasePercentageRsp;
+import com.xspace.ordercenter.rsp.IndustryTypeRsp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

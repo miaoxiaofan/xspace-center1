@@ -1,6 +1,6 @@
 package com.xspace.commoncenter.thread;
 
-import com.xspace.accountcenter.CommonRsp;
+
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -60,11 +60,11 @@ public class ThreadCreate {
 
         ExecutorService executorService=Executors.newFixedThreadPool(10);
         //异步响应
-        Future<CommonRsp> future= executorService.submit(new MyCallable());
+        Future<CommonResp> future= executorService.submit(new MyCallable());
         executorService.shutdown();
         try {
             //线程阻塞等待 任务结果
-            CommonRsp rsp=future.get();
+            CommonResp rsp=future.get();
             System.out.println(System.currentTimeMillis()+":任务结果:"+rsp.getMsg());
         } catch (InterruptedException e) {
             e.printStackTrace();

@@ -2,14 +2,14 @@ package com.xspace.management.controller;
 
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.common.utils.ApiSessionUtils;
-import com.unicom.js.ibo.iboapi.service.TGridManagerService;
-import com.unicom.js.ibo.iboapi.service.TParkService;
-import com.unicom.js.ibo.infocenter.req.SearchParkReq;
-import com.unicom.js.ibo.infocenter.rsp.SearchParkRsp;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.commoncenter.utils.ApiSessionUtils;
+import com.xspace.management.service.TGridManagerService;
+import com.xspace.management.service.TParkService;
+import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.req.SearchParkReq;
+import com.xspace.ordercenter.rsp.SearchParkRsp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +36,7 @@ public class TParkController extends BaseController{
 
     @RequestMapping(value = "/parkList.json")
     @ResponseBody
-    public ApiResultEntity parkList(HttpServletRequest request, Integer pageNo,Integer pageSize){
+    public ApiResultEntity parkList(HttpServletRequest request, Integer pageNo, Integer pageSize){
 
         if (pageNo == null || pageNo < 1) {
             pageNo = 1;

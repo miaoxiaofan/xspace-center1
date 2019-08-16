@@ -14,7 +14,6 @@ import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @ImportResource({"classpath:/dubbo/*.xml"})
-@EnableRetry
 public class ManagementCenterApplication {
     /**
      * 跨域过滤器

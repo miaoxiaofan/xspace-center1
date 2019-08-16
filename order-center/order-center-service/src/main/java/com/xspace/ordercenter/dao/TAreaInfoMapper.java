@@ -4,7 +4,8 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TAreaInfo;
+
+import com.xspace.ordercenter.bean.TAreaInfo;
 
 import java.util.List;
 

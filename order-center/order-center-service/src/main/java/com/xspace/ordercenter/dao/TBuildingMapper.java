@@ -2,8 +2,8 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TBuilding;
-import com.unicom.js.ibo.infocenter.rsp.BuildingIndustryStatRsp;
+import com.xspace.ordercenter.bean.TBuilding;
+import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
 
 import java.util.List;
 

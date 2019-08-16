@@ -1,11 +1,11 @@
 package com.xspace.management.controller;
 
-import com.unicom.js.ibo.common.Constants;
-import com.unicom.js.ibo.common.auth.AuthHelper;
-import com.unicom.js.ibo.common.utils.WebUtils;
-import com.unicom.js.ibo.iboapi.component.DingTalkComponent;
-import com.unicom.js.ibo.iboapi.service.TGridManagerService;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.commoncenter.Constants;
+import com.xspace.commoncenter.auth.AuthHelper;
+import com.xspace.commoncenter.utils.WebUtils;
+import com.xspace.management.component.DingTalkComponent;
+import com.xspace.management.service.TGridManagerService;
+import com.xspace.ordercenter.bean.TGridManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

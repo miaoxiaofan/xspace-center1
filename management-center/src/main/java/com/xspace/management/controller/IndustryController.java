@@ -1,9 +1,9 @@
 package com.xspace.management.controller;
 
 
-import com.unicom.js.ibo.common.ApiResultEntity;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.iboapi.service.IndustryService;
+import com.xspace.commoncenter.ApiResultEntity;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.management.service.IndustryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class IndustryController  extends BaseController{
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     @Autowired
-    private IndustryService  industryService;
+    private IndustryService industryService;
 
     @RequestMapping(value = "/parkIndustryList.json")
     @ResponseBody

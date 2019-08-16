@@ -2,14 +2,14 @@ package com.xspace.ordercenter.service.impl;
 
 
 
-import com.unicom.js.ibo.infocenter.bean.TIndustryType;
-import com.unicom.js.ibo.infocenter.dao.TCompanyCountOfBuildingMapper;
-import com.unicom.js.ibo.infocenter.dao.TIndustryTypeMapper;
-import com.unicom.js.ibo.infocenter.rsp.BaseIndustryTypeRsp;
-import com.unicom.js.ibo.infocenter.rsp.BasePercentageRsp;
-import com.unicom.js.ibo.infocenter.rsp.IndustryTypeRsp;
-import com.unicom.js.ibo.infocenter.rsp.ParkIndustryPercentageRsp;
-import com.unicom.js.ibo.infocenter.service.IndustryService;
+import com.xspace.ordercenter.bean.TIndustryType;
+import com.xspace.ordercenter.dao.TCompanyCountOfBuildingMapper;
+import com.xspace.ordercenter.dao.TIndustryTypeMapper;
+import com.xspace.ordercenter.rsp.BaseIndustryTypeRsp;
+import com.xspace.ordercenter.rsp.BasePercentageRsp;
+import com.xspace.ordercenter.rsp.IndustryTypeRsp;
+import com.xspace.ordercenter.rsp.ParkIndustryPercentageRsp;
+import com.xspace.ordercenter.service.IndustryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

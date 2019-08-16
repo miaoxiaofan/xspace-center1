@@ -1,7 +1,6 @@
 package com.xspace.ordercenter.service.impl;
 
 import com.xspace.ordercenter.dao.EmployeeMapper;
-import com.xspace.ordercenter.entity.Employee;
 import com.xspace.ordercenter.req.EmployeeDto;
 import com.xspace.ordercenter.service.FindEmployeeService;
 import org.slf4j.Logger;
