@@ -2,6 +2,7 @@ package com.xspace.management.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.xspace.management.service.TestService;
+import com.xspace.ordercenter.entity.Employee;
 import com.xspace.ordercenter.entity.TAreaInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,5 +38,11 @@ public class TestController {
     @ResponseBody
     public PageInfo<TAreaInfo> findCityInfoPage(TAreaInfo bean, Integer pageNum, Integer pageSize)  {
         return  testService.findCityAreaByPage( bean,pageNum,pageSize);
+    }
+
+
+    @RequestMapping(value = "/kafka")
+    public void saveEmployee(Employee employee) throws Exception {
+        testService.saveEmployee(employee);
     }
 }

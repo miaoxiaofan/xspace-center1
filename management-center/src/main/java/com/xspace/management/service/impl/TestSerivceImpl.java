@@ -4,6 +4,7 @@ import com.github.pagehelper.PageInfo;
 
 import com.xspace.management.service.TestService;
 import com.xspace.ordercenter.api.CityInfoApi;
+import com.xspace.ordercenter.entity.Employee;
 import com.xspace.ordercenter.entity.TAreaInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +30,10 @@ public class TestSerivceImpl implements TestService {
     @Override
     public PageInfo<TAreaInfo> findCityAreaByPage(TAreaInfo bean, Integer pageNum, Integer pageSize) {
         return cityInfoApi.findCityAreaByPage(bean,pageNum,pageSize);
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        cityInfoApi.saveEmployee(employee);
     }
 }

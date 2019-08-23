@@ -3,7 +3,9 @@ package com.xspace.ordercenter.api.impl;
 import com.github.pagehelper.PageInfo;
 
 import com.xspace.ordercenter.api.CityInfoApi;
+import com.xspace.ordercenter.entity.Employee;
 import com.xspace.ordercenter.entity.TAreaInfo;
+import com.xspace.ordercenter.kafka.KafkaProducer;
 import com.xspace.ordercenter.service.CityInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +26,9 @@ public class CityInfoApiService implements CityInfoApi {
 
     @Autowired
     private CityInfoService cityInfoService;
+
+    @Autowired
+    private KafkaProducer kafkaProducer;
     @Override
     public List<TAreaInfo> findCityArea(TAreaInfo bean) {
         logger.info("开始查询");
@@ -46,5 +51,14 @@ public class CityInfoApiService implements CityInfoApi {
             logger.error("系统"+e);
         }
         return result;
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        try {
+            kafkaProducer.kafkaSend(employee);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
