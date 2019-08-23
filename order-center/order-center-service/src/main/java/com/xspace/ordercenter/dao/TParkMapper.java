@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.xspace.ordercenter.bean.TPark;
+import com.xspace.ordercenter.entity.TPark;
 import com.xspace.ordercenter.req.SearchParkReq;
 import com.xspace.ordercenter.rsp.SearchParkRsp;
 

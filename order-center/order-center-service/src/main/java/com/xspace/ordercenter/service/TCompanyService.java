@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service;
 
 import com.github.pagehelper.PageInfo;
-import com.xspace.ordercenter.bean.TManagerCompanyMark;
+import com.xspace.ordercenter.entity.TManagerCompanyMark;
 import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
 import com.xspace.ordercenter.req.SearchCompanyReq;
 import com.xspace.ordercenter.rsp.CompanyInfoRsp;

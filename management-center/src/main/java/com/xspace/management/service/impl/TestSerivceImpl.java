@@ -4,7 +4,7 @@ import com.github.pagehelper.PageInfo;
 
 import com.xspace.management.service.TestService;
 import com.xspace.ordercenter.api.CityInfoApi;
-import com.xspace.ordercenter.bean.TAreaInfo;
+import com.xspace.ordercenter.entity.TAreaInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

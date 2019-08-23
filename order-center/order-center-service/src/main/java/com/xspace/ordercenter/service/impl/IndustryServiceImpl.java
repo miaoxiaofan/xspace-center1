@@ -2,7 +2,7 @@ package com.xspace.ordercenter.service.impl;
 
 
 
-import com.xspace.ordercenter.bean.TIndustryType;
+import com.xspace.ordercenter.entity.TIndustryType;
 import com.xspace.ordercenter.dao.TCompanyCountOfBuildingMapper;
 import com.xspace.ordercenter.dao.TIndustryTypeMapper;
 import com.xspace.ordercenter.rsp.BaseIndustryTypeRsp;
@@ -86,7 +86,8 @@ public class IndustryServiceImpl implements IndustryService {
 
         //总数
         int allCount = 0;
-        int range = 100;
+
+        BigDecimal range=new BigDecimal(100);
         int otherTypeIndex = -1;
         //计算总数，并判断前6名，是否有“其他行业分类”
 
@@ -103,12 +104,12 @@ public class IndustryServiceImpl implements IndustryService {
         if (size <= 6) {
             for (int i = 0; i < size; i++) {
                 if (i == size - 1) {
-                    list.get(i).setCompanyRate(range + "%");
+                    list.get(i).setCompanyRate(range.toString() + "%");
                     break;
                 }
-                BigDecimal bigDecimal = new BigDecimal(100.0 * list.get(i).getCompanyNum() / allCount).setScale(0, BigDecimal.ROUND_DOWN);
+                BigDecimal bigDecimal = new BigDecimal(100.0 * list.get(i).getCompanyNum() / allCount).setScale(1, BigDecimal.ROUND_DOWN);
                 list.get(i).setCompanyRate(bigDecimal.toString() + "%");
-                range -= bigDecimal.intValue();
+                range = range.subtract(bigDecimal);
             }
         } else {
             //取出其他分类数据
@@ -117,19 +118,19 @@ public class IndustryServiceImpl implements IndustryService {
             }
             int allCountP = allCount;
             for (int i = 0; i < 6; i++) {
-                BigDecimal bigDecimal = new BigDecimal(100.0 * list.get(i).getCompanyNum() / allCount).setScale(0, BigDecimal.ROUND_DOWN);
+                BigDecimal bigDecimal = new BigDecimal(100.0 * list.get(i).getCompanyNum() / allCount).setScale(1, BigDecimal.ROUND_DOWN);
                 list.get(i).setCompanyRate(bigDecimal.toString() + "%");
-                range -= bigDecimal.intValue();
+                range = range.subtract(bigDecimal);
                 allCountP = allCountP - list.get(i).getCompanyNum();
             }
             if (list.size() >= 7) {
-                list.get(6).setCompanyRate(range + "%");
+                list.get(6).setCompanyRate(range.toString() + "%");
                 list.get(6).setCompanyNum(allCountP);
                 list.get(6).setIndustryCode(OTHER_TYPE);
                 list.get(6).setIndustryName("其他行业");
             } else {
                 ParkIndustryPercentageRsp other = new ParkIndustryPercentageRsp();
-                other.setCompanyRate(range + "%");
+                other.setCompanyRate(range.toString() + "%");
                 other.setCompanyNum(allCountP);
                 other.setIndustryCode(OTHER_TYPE);
                 other.setIndustryName("其他行业");

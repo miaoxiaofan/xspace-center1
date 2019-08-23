@@ -2,7 +2,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TBuilding;
+import com.xspace.ordercenter.entity.TBuilding;
 import com.xspace.ordercenter.rsp.BuildingIndustryStatRsp;
 
 import java.util.List;

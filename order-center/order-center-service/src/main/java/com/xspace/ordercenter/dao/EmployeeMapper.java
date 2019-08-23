@@ -1,6 +1,6 @@
 package com.xspace.ordercenter.dao;
 
-import com.unicom.js.ibo.usercenter.bean.Employee;
+import com.xspace.ordercenter.entity.Employee;
 import com.xspace.ordercenter.req.EmployeeDto;
 
 import java.util.List;

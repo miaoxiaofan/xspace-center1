@@ -57,4 +57,13 @@
     select id, manager_code, company_code, our_ratings
     from t_manager_company_recommend
   </select>
+
+  <select id="findHotCompanyIds" resultType="java.lang.String">
+    SELECT
+    t.company_code
+    FROM t_manager_company_recommend t
+    WHERE t.manager_code = #{managerCode}
+    ORDER BY t.our_ratings DESC
+    LIMIT 5
+  </select>
 </mapper>

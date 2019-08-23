@@ -1,4 +1,4 @@
-package com.xspace.ordercenter.bean;
+package com.xspace.ordercenter.entity;
 
 import java.io.Serializable;
 

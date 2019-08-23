@@ -2,7 +2,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TManagerCompanyRecommend;
+import com.xspace.ordercenter.entity.TManagerCompanyRecommend;
 
 import java.util.ArrayList;
 import java.util.List;

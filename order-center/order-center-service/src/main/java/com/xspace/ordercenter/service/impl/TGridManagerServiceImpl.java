@@ -1,7 +1,8 @@
 package com.xspace.ordercenter.service.impl;
 
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
 
+
+import com.xspace.ordercenter.entity.TGridManager;
 import com.xspace.ordercenter.dao.TGridManagerMapper;
 import com.xspace.ordercenter.service.TGridManagerService;
 import org.springframework.beans.factory.annotation.Autowired;

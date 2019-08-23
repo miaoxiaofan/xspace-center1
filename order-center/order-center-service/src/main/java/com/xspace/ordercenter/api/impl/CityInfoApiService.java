@@ -1,8 +1,9 @@
 package com.xspace.ordercenter.api.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.usercenter.api.CityInfoApi;
-import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+
+import com.xspace.ordercenter.api.CityInfoApi;
+import com.xspace.ordercenter.entity.TAreaInfo;
 import com.xspace.ordercenter.service.CityInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

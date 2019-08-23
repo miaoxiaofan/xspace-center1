@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service;
 
 
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 
 /**
  * @author huxl

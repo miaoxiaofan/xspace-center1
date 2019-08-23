@@ -1,5 +1,9 @@
-server:
-  port: 18181
+
+logging:
+  level:
+    com.xspace.ordercenter.dao: debug
+
+  file: /app/deploy/xspace/order-center/logs
 
 spring:
   profiles:
@@ -31,10 +35,9 @@ spring:
       time-to-live: 12h #缓存超时时间
       cache-null-values: false #是否缓存空值
   redis:
-    host: 192.168.0.131,192.168.0.132,192.168.0.133
-    database: 0
-    port: 6379
-    password: jslt$T1xsnbsj
+    cluster:
+      max-redirects: 3  # 获取失败 最大重定向次数
+      nodes: 192.168.0.131:13301,192.168.0.131:13302,192.168.0.132:13301,192.168.0.132:13302,192.168.0.133:13301,192.168.0.133:13302
     timeout: 2000s
     lettuce:
       shutdown-timeout: 100ms
@@ -69,18 +72,15 @@ dubbo:
 mybatis:
   mapper-locations: classpath:mybatis/mapper/*.xml         #配置映射文件位置，classpath指resources
   type-aliases-package: com.xspace.ordercenter.dao      #实体类所在位置
-  configuration:                                    #打印sql到控制台
-        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  configuration:
+    map-underscore-to-camel-case: true
+                                    #打印sql到控制台
 
 pagehelper:
     helperDialect: mysql                           #分页插件方言选择
     reasonable: true                               #合理化参数，设为true时pageNum<=0 时会查第一页， pageNum>pages（超过总数时），会查询最后一页
     supportMethodsArguments: true
 
-logging:
-  level:
-    com.xspace.ordercenter.dao : debug
-  file: /app/deploy/xspace/info-center/logs
 
 ---
 spring:
@@ -91,15 +91,20 @@ spring:
     username: root
     password: 1429425727
   redis:
-    host: 192.168.0.131,192.168.0.132,192.168.0.133
-    database: 0
+    cluster:
+      max-redirects: 3  # 获取失败 最大重定向次数
+      nodes: 192.168.0.131:13301,192.168.0.131:13302,192.168.0.132:13301,192.168.0.132:13302,192.168.0.133:13301,192.168.0.133:13302
     port: 6379
-    password: jslt$T1xsnbsj
     timeout: 2000s
 
 dubbo:
   registry:
     address: 192.168.0.131:2181,192.168.0.132:2181,192.168.0.133:2181
+logging:
+  level:
+    com.xspace.ordercenter.dao: debug
+
+  file: /app/deploy/xspace/order-center/logs
 
 ---
 spring:
@@ -110,10 +115,9 @@ spring:
     username: root
     password: 1429425727
   redis:
-    host: 192.168.0.131,192.168.0.132,192.168.0.133
-    database: 0
-    port: 6379
-    password: jslt$T1xsnbsj
+    cluster:
+      max-redirects: 3  # 获取失败 最大重定向次数
+      nodes: 192.168.0.131:13301,192.168.0.131:13302,192.168.0.132:13301,192.168.0.132:13302,192.168.0.133:13301,192.168.0.133:13302
     timeout: 2000s
 
 dubbo:

@@ -2,9 +2,10 @@ package com.xspace.ordercenter.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
-import com.unicom.js.ibo.usercenter.dao.TAreaInfoMapper;
-import com.unicom.js.ibo.usercenter.service.CityInfoService;
+
+import com.xspace.ordercenter.entity.TAreaInfo;
+import com.xspace.ordercenter.dao.TAreaInfoMapper;
+import com.xspace.ordercenter.service.CityInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

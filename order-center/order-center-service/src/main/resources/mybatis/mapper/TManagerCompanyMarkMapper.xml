@@ -55,4 +55,19 @@
     select id, manager_code, company_code
     from t_manager_company_mark
   </select>
+  <select id="findCompanyMark" resultMap="BaseResultMap" parameterType="com.xspace.ordercenter.entity.TManagerCompanyMark">
+    select id, manager_code, company_code
+    from t_manager_company_mark
+    <where>
+      <if test="id != null" >
+        id=  #{id,jdbcType=INTEGER}
+      </if>
+      <if test="managerCode != null" >
+        and  manager_code=  #{managerCode,jdbcType=INTEGER}
+      </if>
+      <if test="companyCode != null" >
+        and  company_code= #{companyCode,jdbcType=INTEGER}
+      </if>
+    </where>
+  </select>
 </mapper>

@@ -4,7 +4,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TCompanyIndustry;
+import com.xspace.ordercenter.entity.TCompanyIndustry;
 
 import java.util.List;
 

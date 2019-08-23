@@ -59,4 +59,10 @@
     select id, code, `name`, parent_code, `level`
     from t_industry_type
   </select>
+
+  <select id="findIndustryType" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select id, code, `name`, parent_code, `level`
+    from t_industry_type
+    where  parent_code= #{parentCode,jdbcType=INTEGER}
+  </select>
 </mapper>

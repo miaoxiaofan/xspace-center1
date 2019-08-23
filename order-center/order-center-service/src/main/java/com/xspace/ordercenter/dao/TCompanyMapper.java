@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.xspace.ordercenter.bean.TCompany;
+import com.xspace.ordercenter.entity.TCompany;
 import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
 import com.xspace.ordercenter.req.SearchCompanyReq;
 import com.xspace.ordercenter.rsp.CompanyInfoRsp;

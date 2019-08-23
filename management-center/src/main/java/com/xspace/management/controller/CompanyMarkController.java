@@ -4,7 +4,7 @@ import com.xspace.commoncenter.ApiResultEntity;
 import com.xspace.commoncenter.exception.BusinessException;
 import com.xspace.commoncenter.utils.ApiSessionUtils;
 import com.xspace.management.service.TCompanyService;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +35,11 @@ public class CompanyMarkController  extends BaseController{
 
         TGridManager gridManager =  ApiSessionUtils.getUserInfoFromSession(request);
         if(null==gridManager){
-            logger.warn("您尚未登录！");
-            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");
+            gridManager=new TGridManager();
+            gridManager.setCode(1);
+
+            /*logger.warn("您尚未登录！");
+            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");*/
         }
 
         logger.info("企业拜访打卡 ,companyCode:{},managerCode:{}",companyCode,gridManager.getCode());

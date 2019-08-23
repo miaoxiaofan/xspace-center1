@@ -2,7 +2,7 @@ package com.xspace.management.service.impl;
 
 import com.xspace.management.service.TGridManagerService;
 import com.xspace.ordercenter.api.TGridManagerApi;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

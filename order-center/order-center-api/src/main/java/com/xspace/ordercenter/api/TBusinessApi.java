@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.api;
 
 
-import com.xspace.ordercenter.bean.TBusiness;
+import com.xspace.ordercenter.entity.TBusiness;
 
 import java.util.List;
 

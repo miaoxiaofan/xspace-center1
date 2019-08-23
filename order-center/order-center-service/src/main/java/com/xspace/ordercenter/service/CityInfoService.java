@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.usercenter.bean.TAreaInfo;
+import com.xspace.ordercenter.entity.TAreaInfo;
 
 import java.util.List;
 

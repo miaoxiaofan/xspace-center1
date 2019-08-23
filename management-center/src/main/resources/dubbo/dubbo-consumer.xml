@@ -15,4 +15,7 @@
     <dubbo:reference id="tBusinessApiImpl" interface="com.xspace.ordercenter.api.TBusinessApi" />
     <dubbo:reference id="tBuildingApiImpl" interface="com.xspace.ordercenter.api.TBuildingApi" />
     <dubbo:reference id="tCompanyApiImpl" interface="com.xspace.ordercenter.api.TCompanyApi" />
+
+    <dubbo:reference id="findEmployeeApiImpl" interface="com.xspace.ordercenter.api.FindEmployeeApi" />
+
 </beans>

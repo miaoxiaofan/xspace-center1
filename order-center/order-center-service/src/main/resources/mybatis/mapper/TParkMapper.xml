@@ -81,4 +81,29 @@
     area_name, address, building_num, logo_src
     from t_park
   </select>
+
+
+  <select id="findParkList"  resultType="com.xspace.ordercenter.rsp.SearchParkRsp">
+    select id, grid_code, manager_code, code as parkCode, `name` as parkName, city_code, city_name, area_code,
+    area_name, address, building_num, logo_src
+    from t_park
+    where  grid_code=#{gridCode}
+    and    manager_code=#{managerCode}
+  </select>
+
+  <select id="searchPark"  resultType="com.xspace.ordercenter.rsp.SearchParkRsp" parameterType="com.xspace.ordercenter.req.SearchParkReq">
+    select id, grid_code, manager_code, code as parkCode, `name` as parkName, city_code, city_name, area_code,
+    area_name, address, building_num, logo_src
+    from t_park
+    where
+    manager_code=#{managerCode}
+    <if test="parkName != null and parkName !='' " >
+      and  name like concat('%', #{parkName,jdbcType=VARCHAR}, '%')
+    </if>
+  </select>
+
+  <select id="selectParkBuildingNumByData" resultMap="BaseResultMap">
+    SELECT  c.park_code code,COUNT(DISTINCT c.building_code) building_num   FROM  t_company  c  GROUP BY c.park_code
+  </select>
+
 </mapper>

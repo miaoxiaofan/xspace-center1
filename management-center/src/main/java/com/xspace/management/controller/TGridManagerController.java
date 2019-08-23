@@ -1,7 +1,7 @@
 package com.xspace.management.controller;
 
 
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import com.xspace.commoncenter.ApiResultEntity;
 import com.xspace.commoncenter.utils.ApiSessionUtils;
 import com.xspace.management.service.TGridManagerService;

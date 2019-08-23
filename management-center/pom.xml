@@ -69,6 +69,11 @@
             <artifactId>order-center-api</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.xspace.common</groupId>
+            <artifactId>common-center</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

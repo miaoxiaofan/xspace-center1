@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.service.impl;
 
 
-import com.xspace.ordercenter.bean.TBusiness;
+import com.xspace.ordercenter.entity.TBusiness;
 import com.xspace.ordercenter.dao.TBusinessMapper;
 import com.xspace.ordercenter.service.TBusinessService;
 import org.slf4j.Logger;

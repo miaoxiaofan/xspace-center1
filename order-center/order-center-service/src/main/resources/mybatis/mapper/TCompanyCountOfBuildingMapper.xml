@@ -69,4 +69,39 @@
     company_num
     from t_company_count_of_building
   </select>
+
+
+  <select id="parkIndustryList" resultType="com.xspace.ordercenter.rsp.ParkIndustryPercentageRsp" parameterType="java.lang.String">
+    select  industry_type_code  as industry_code,industry_type_name as industry_name ,sum(company_num ) as company_num  from t_company_count_of_building
+    where park_code=#{searchCode,jdbcType=INTEGER}
+    group  by  industry_type_code
+    order by  company_num desc
+  </select>
+
+  <select id="buildIndustryList" resultType="com.xspace.ordercenter.rsp.ParkIndustryPercentageRsp" >
+    select  industry_type_code  as industry_code,industry_type_name as industry_name ,sum(company_num ) as company_num  from t_company_count_of_building
+    where park_code=#{parkCode,jdbcType=INTEGER}
+    and build_code =#{buildCode,jdbcType=INTEGER}
+    group  by  industry_type_code
+    order by  company_num desc
+  </select>
+
+  <select id="selectCompanyCountOfBuildingByData" resultMap="BaseResultMap">
+    SELECT
+    t.park_code,
+    t.park_name,
+    t.building_code    build_code,
+    t.building_name    build_name,
+    tit.parent_code    industry_type_code,
+    titt.name industry_type_name,
+    COUNT(t.code)      company_num
+    FROM t_company t
+    LEFT JOIN t_industry_type tit
+    ON t.industry_type_code = tit.code  AND tit.level=2
+    LEFT JOIN t_industry_type titt
+    ON tit.parent_code = titt.code  AND titt.level=1
+    GROUP BY t.building_code,tit.parent_code
+  </select>
+
+
 </mapper>

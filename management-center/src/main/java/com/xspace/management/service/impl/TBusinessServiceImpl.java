@@ -2,7 +2,7 @@ package com.xspace.management.service.impl;
 
 import com.xspace.management.service.TBusinessService;
 import com.xspace.ordercenter.api.TBusinessApi;
-import com.xspace.ordercenter.bean.TBusiness;
+import com.xspace.ordercenter.entity.TBusiness;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

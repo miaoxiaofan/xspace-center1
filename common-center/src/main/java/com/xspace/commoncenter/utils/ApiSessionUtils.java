@@ -4,7 +4,7 @@ package com.xspace.commoncenter.utils;
 
 
 import com.xspace.commoncenter.Constants;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;

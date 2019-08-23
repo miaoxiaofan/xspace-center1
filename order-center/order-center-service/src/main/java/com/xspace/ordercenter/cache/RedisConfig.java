@@ -1,10 +1,10 @@
-package com.xspace.commoncenter.cache;
+package com.xspace.ordercenter.cache;
 
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
+import com.xspace.commoncenter.cache.CacheConstants;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.CachingConfigurerSupport;

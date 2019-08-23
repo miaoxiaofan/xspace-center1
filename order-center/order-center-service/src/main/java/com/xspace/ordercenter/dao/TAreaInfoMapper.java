@@ -5,7 +5,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TAreaInfo;
+import com.xspace.ordercenter.entity.TAreaInfo;
 
 import java.util.List;
 

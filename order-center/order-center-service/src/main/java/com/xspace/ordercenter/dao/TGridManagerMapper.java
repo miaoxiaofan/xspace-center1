@@ -2,7 +2,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

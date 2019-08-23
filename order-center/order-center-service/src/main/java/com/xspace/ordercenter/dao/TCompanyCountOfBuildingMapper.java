@@ -2,7 +2,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TCompanyCountOfBuilding;
+import com.xspace.ordercenter.entity.TCompanyCountOfBuilding;
 import com.xspace.ordercenter.rsp.ParkIndustryPercentageRsp;
 import org.apache.ibatis.annotations.Param;
 

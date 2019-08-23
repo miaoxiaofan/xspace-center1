@@ -95,4 +95,68 @@
     business_scope, intended_business_code, industry_type_code
     from t_company
   </select>
+
+  <select id="companyList" resultType="com.xspace.ordercenter.rsp.CompanyInfoRsp" >
+    select a.id, a.code, a.park_code, a.park_name, a.building_code, a.building_name, a.company_name,
+    a.corporation,  a.create_date, a.registered_capital, a.address, a.phone_number, a.longitude, a.latitude,
+    a.business_scope, a.intended_business_code, a.industry_type_code,if(b.company_code,'1','0' ) as  visitFlag,c.name as intendedBusiness
+    from t_company a
+    left join   t_manager_company_mark  b   on a.code =b.company_code and  b.manager_code=#{req.managerCode,jdbcType=INTEGER}
+    left join  t_business c  on a.intended_business_code =c.code
+    left join t_industry_type d on a.industry_type_code=d.code  and  d.level=2
+    where a.building_code=#{req.buildingCode,jdbcType=INTEGER}
+
+    <if test="req.industryCode != null and req.industryCode !='' " >
+      and d.parent_code =#{req.industryCode,jdbcType=INTEGER}
+    </if>
+  </select>
+
+
+  <select id="searchCompany" resultType="com.xspace.ordercenter.rsp.CompanyInfoRsp" >
+    select a.id, a.code, a.park_code, a.park_name, a.building_code, a.building_name, a.company_name,
+    a.corporation,  a.create_date, a.registered_capital, a.address, a.phone_number, a.longitude, a.latitude,
+    a.business_scope, a.intended_business_code, a.industry_type_code,if(b.company_code,'1','0' ) as  visitFlag,c.name as intendedBusiness
+    from t_company a
+    inner join   t_park d  on  d.code=a.park_code  and  d.manager_code= #{req.managerCode,jdbcType=INTEGER}
+    left join   t_manager_company_mark  b   on a.code =b.company_code and  b.manager_code=#{req.managerCode,jdbcType=INTEGER}
+    left join  t_business c  on a.intended_business_code =c.code
+    <where>
+      <if test="req.intendedBusinessCode != null and req.intendedBusinessCode !='' " >
+        a.intended_business_code =#{req.intendedBusinessCode,jdbcType=INTEGER}
+      </if>
+      <if test="req.industryCode != null and req.industryCode !='' " >
+        and a.industry_type_code in
+        <foreach collection="industryCodes" item="item" index="index"
+                 open="(" separator="," close=")">
+          #{item}
+        </foreach>
+      </if>
+      <if test="req.companyName != null and req.companyName !='' " >
+        and a.company_name like concat('%', #{req.companyName,jdbcType=VARCHAR}, '%')
+      </if>
+
+      <if test="req.visitFlag != null and req.visitFlag !='' " >
+        and if(b.company_code,'1','0') = #{req.visitFlag}
+      </if>
+    </where>
+  </select>
+
+  <select id="findHotCompany" resultType="com.xspace.ordercenter.rsp.CompanyInfoRsp">
+    SELECT  a.code ,a.id,  a.park_code, a.park_name, a.building_code, a.building_name, a.company_name,
+    a.corporation,  a.create_date, a.registered_capital, a.address, a.phone_number, a.longitude, a.latitude,
+    a.business_scope, a.intended_business_code, a.industry_type_code,IF(tm.company_code,'1','0' ) AS  visit_flag,c.name AS intended_business
+    FROM  t_company a
+    LEFT JOIN (SELECT m.company_code  FROM t_manager_company_mark m WHERE m.manager_code =  #{managerCode,jdbcType=INTEGER} GROUP BY m.company_code) tm
+    ON a.code=tm.company_code
+    LEFT JOIN  t_business c  ON a.intended_business_code =c.code
+    <where>
+      <if test="hotCompanyIds!= null">
+        AND a.code in <foreach item="item" index="index" collection="hotCompanyIds"
+                               open="(" separator="," close=")"> #{item}</foreach>
+      </if>
+
+    </where>
+    ORDER BY FIELD(a.code,<foreach item="item" index="index" collection="hotCompanyIds"
+                                   separator="," > #{item}</foreach>)
+  </select>
 </mapper>

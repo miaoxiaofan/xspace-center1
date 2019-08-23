@@ -1,10 +1,10 @@
-package com.xspace.ordercenter.bean;
+package com.xspace.ordercenter.entity;
 
 import java.io.Serializable;
 
-public class TManagerCompanyRecommend implements Serializable {
+public class TManagerCompanyMark implements Serializable {
     /**
-     * 主键id
+     * 
      */
     private Integer id;
 
@@ -17,11 +17,6 @@ public class TManagerCompanyRecommend implements Serializable {
      * 公司编码
      */
     private Integer companyCode;
-
-    /**
-     * 推荐指数
-     */
-    private Integer ourRatings;
 
     private static final long serialVersionUID = 1L;
 
@@ -47,19 +42,5 @@ public class TManagerCompanyRecommend implements Serializable {
 
     public void setCompanyCode(Integer companyCode) {
         this.companyCode = companyCode;
-    }
-
-    public Integer getOurRatings() {
-        return ourRatings;
-    }
-
-    public void setOurRatings(Integer ourRatings) {
-        this.ourRatings = ourRatings;
-    }
-
-    public TManagerCompanyRecommend(Integer managerCode, Integer companyCode, Integer ourRatings) {
-        this.managerCode = managerCode;
-        this.companyCode = companyCode;
-        this.ourRatings = ourRatings;
     }
 }

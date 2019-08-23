@@ -3,7 +3,7 @@ package com.xspace.ordercenter.dao;
 
 
 
-import com.xspace.ordercenter.bean.TManagerCompanyMark;
+import com.xspace.ordercenter.entity.TManagerCompanyMark;
 
 import java.util.List;
 

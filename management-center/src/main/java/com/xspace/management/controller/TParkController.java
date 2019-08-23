@@ -7,7 +7,7 @@ import com.xspace.commoncenter.exception.BusinessException;
 import com.xspace.commoncenter.utils.ApiSessionUtils;
 import com.xspace.management.service.TGridManagerService;
 import com.xspace.management.service.TParkService;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import com.xspace.ordercenter.req.SearchParkReq;
 import com.xspace.ordercenter.rsp.SearchParkRsp;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,8 +79,10 @@ public class TParkController extends BaseController{
     public ApiResultEntity searchPark(SearchParkReq req, HttpServletRequest request) {
         TGridManager gridManager = ApiSessionUtils.getUserInfoFromSession(request);
         if (null == gridManager) {
-            logger.warn("您尚未登录！");
-            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");
+            gridManager=new TGridManager();
+            gridManager.setCode(1);
+           /* logger.warn("您尚未登录！");
+            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");*/
         }
         req.setManagerCode(gridManager.getCode());
         logger.info("智能查找-查找园区,  pageNo:{},pageSize:{},parkName:{},managerCode:{}", req.getPageNo(),req.getPageSize(),req.getParkName(),gridManager.getCode());

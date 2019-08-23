@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.xspace.ordercenter.bean.TIndustryType;
+import com.xspace.ordercenter.entity.TIndustryType;
 
 import java.util.List;
 

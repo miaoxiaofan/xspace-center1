@@ -5,7 +5,7 @@ import com.xspace.commoncenter.auth.AuthHelper;
 import com.xspace.commoncenter.utils.WebUtils;
 import com.xspace.management.component.DingTalkComponent;
 import com.xspace.management.service.TGridManagerService;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

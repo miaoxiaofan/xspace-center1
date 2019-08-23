@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.dao;
 
 
-import com.xspace.ordercenter.bean.TfImportExportCompany;
+import com.xspace.ordercenter.entity.TfImportExportCompany;
 
 import java.util.List;
 

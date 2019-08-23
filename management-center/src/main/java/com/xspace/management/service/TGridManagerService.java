@@ -1,6 +1,6 @@
 package com.xspace.management.service;
 
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 
 
 /**

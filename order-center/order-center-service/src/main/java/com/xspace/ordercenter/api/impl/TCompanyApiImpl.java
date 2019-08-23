@@ -1,15 +1,16 @@
 package com.xspace.ordercenter.api.impl;
 
 import com.github.pagehelper.PageInfo;
-import com.unicom.js.ibo.common.enums.BaseErrorEnum;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.infocenter.api.TCompanyApi;
-import com.unicom.js.ibo.infocenter.bean.TManagerCompanyMark;
-import com.unicom.js.ibo.infocenter.req.BuildingCompanyInfoReq;
-import com.unicom.js.ibo.infocenter.req.SearchCompanyReq;
-import com.unicom.js.ibo.infocenter.rsp.CompanyInfoRsp;
-import com.unicom.js.ibo.infocenter.service.TCompanyService;
-import com.unicom.js.ibo.infocenter.service.TManagerCompanyRecommendService;
+
+import com.xspace.commoncenter.enums.BaseErrorEnum;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.ordercenter.api.TCompanyApi;
+import com.xspace.ordercenter.entity.TManagerCompanyMark;
+import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
+import com.xspace.ordercenter.req.SearchCompanyReq;
+import com.xspace.ordercenter.rsp.CompanyInfoRsp;
+import com.xspace.ordercenter.service.TCompanyService;
+import com.xspace.ordercenter.service.TManagerCompanyRecommendService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

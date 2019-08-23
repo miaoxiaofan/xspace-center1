@@ -68,7 +68,7 @@ public class SyncCompanyFileTask implements SchedulingConfigurer {
                         SimpleDateFormat format= new SimpleDateFormat("yyyyMM");
                         date = format.format(cal.getTime());
                     }
-                    syncCompanyFileService.fetchCompanyData(date);
+                    //syncCompanyFileService.fetchCompanyData(date);
                     //删除过期key
                     deleteRedisKeyService.deleteOutOfDateLKey();
                 } catch (Exception e) {

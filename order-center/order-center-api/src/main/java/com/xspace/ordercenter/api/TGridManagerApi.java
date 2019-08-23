@@ -1,7 +1,7 @@
 package com.xspace.ordercenter.api;
 
 
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 
 /**
  * @author huxl

@@ -1,10 +1,11 @@
 package com.xspace.ordercenter.api.impl;
 
-import com.unicom.js.ibo.common.enums.BaseErrorEnum;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.usercenter.api.TGridManagerApi;
-import com.unicom.js.ibo.usercenter.bean.TGridManager;
-import com.unicom.js.ibo.usercenter.service.TGridManagerService;
+
+import com.xspace.commoncenter.enums.BaseErrorEnum;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.ordercenter.api.TGridManagerApi;
+import com.xspace.ordercenter.entity.TGridManager;
+import com.xspace.ordercenter.service.TGridManagerService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

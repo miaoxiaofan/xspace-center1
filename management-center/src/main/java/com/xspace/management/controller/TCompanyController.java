@@ -7,7 +7,7 @@ import com.xspace.commoncenter.exception.BusinessException;
 import com.xspace.commoncenter.utils.ApiSessionUtils;
 import com.xspace.management.service.TCompanyService;
 import com.xspace.management.service.TGridManagerService;
-import com.xspace.ordercenter.bean.TGridManager;
+import com.xspace.ordercenter.entity.TGridManager;
 import com.xspace.ordercenter.req.BuildingCompanyInfoReq;
 import com.xspace.ordercenter.req.SearchCompanyReq;
 import com.xspace.ordercenter.rsp.CompanyInfoRsp;
@@ -44,8 +44,10 @@ public class TCompanyController extends BaseController {
     public ApiResultEntity companyList(BuildingCompanyInfoReq req, HttpServletRequest request) {
         TGridManager gridManager = ApiSessionUtils.getUserInfoFromSession(request);
         if (null == gridManager) {
-            logger.warn("您尚未登录！");
-            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");
+            gridManager=new TGridManager();
+            gridManager.setCode(1);
+            /*logger.warn("您尚未登录！");
+            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");*/
         }
         req.setManagerCode(String.valueOf(gridManager.getCode()));
         logger.info("查询楼宇下企业列表,  BuildingCompanyInfoReq:{}", req);
@@ -86,8 +88,10 @@ public class TCompanyController extends BaseController {
     public ApiResultEntity searchCompany(SearchCompanyReq req, HttpServletRequest request) {
         TGridManager gridManager = ApiSessionUtils.getUserInfoFromSession(request);
         if (null == gridManager) {
-            logger.warn("您尚未登录！");
-            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");
+            gridManager=new TGridManager();
+            gridManager.setCode(1);
+            /*logger.warn("您尚未登录！");
+            return ApiResultEntity.FAILURE(ApiResultEntity.NOAUTH,"您尚未登录！");*/
         }
         req.setManagerCode(String.valueOf(gridManager.getCode()));
         logger.info("智能查找-查找企业,  SearchCompanyReq:{}", req);

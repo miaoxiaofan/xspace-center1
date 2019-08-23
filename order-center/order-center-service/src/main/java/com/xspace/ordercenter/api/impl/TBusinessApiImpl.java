@@ -1,10 +1,11 @@
 package com.xspace.ordercenter.api.impl;
 
-import com.unicom.js.ibo.common.enums.BaseErrorEnum;
-import com.unicom.js.ibo.common.exception.BusinessException;
-import com.unicom.js.ibo.infocenter.api.TBusinessApi;
-import com.unicom.js.ibo.infocenter.bean.TBusiness;
-import com.unicom.js.ibo.infocenter.service.TBusinessService;
+
+import com.xspace.commoncenter.enums.BaseErrorEnum;
+import com.xspace.commoncenter.exception.BusinessException;
+import com.xspace.ordercenter.api.TBusinessApi;
+import com.xspace.ordercenter.entity.TBusiness;
+import com.xspace.ordercenter.service.TBusinessService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
