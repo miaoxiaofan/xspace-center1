@@ -15,10 +15,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaConsumer {
     public static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
-    @KafkaListener(topics = {"mytopic"})
+    @KafkaListener(topics = {"atopic"})
     public void jktopic(ConsumerRecord consumerRecord) throws InterruptedException {
         System.out.println(consumerRecord.offset());
-        System.out.println(consumerRecord.value().toString());
+        logger.info("消费一条记录：{},内容：{}",consumerRecord.offset(),consumerRecord.value().toString());
         Thread.sleep(3000);
     }
 }
