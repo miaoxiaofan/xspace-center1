@@ -64,6 +64,7 @@ spring:
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         properties:
           session.timeout.ms: 15000
+        group-id: cosumer-group1
 dubbo:
   application:
     name: xspace-order

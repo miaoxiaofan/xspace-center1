@@ -11,7 +11,7 @@ public class TBusiness implements Serializable {
     /**
      * 业务编码
      */
-    private Byte code;
+    private String code;
 
     /**
      * 业务名称
@@ -28,11 +28,11 @@ public class TBusiness implements Serializable {
         this.id = id;
     }
 
-    public Byte getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(Byte code) {
+    public void setCode(String   code) {
         this.code = code;
     }
 

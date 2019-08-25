@@ -66,4 +66,16 @@ public class Employee  implements Serializable {
     public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeID=" + employeeID +
+                ", userName='" + userName + '\'' +
+                ", phoneNum='" + phoneNum + '\'' +
+                ", age=" + age +
+                ", createTime=" + createTime +
+                ", lastUpdate=" + lastUpdate +
+                '}';
+    }
 }

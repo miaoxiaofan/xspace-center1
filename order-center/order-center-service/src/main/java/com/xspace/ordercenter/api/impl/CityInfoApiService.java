@@ -56,7 +56,7 @@ public class CityInfoApiService implements CityInfoApi {
     @Override
     public void saveEmployee(Employee employee) {
         try {
-            kafkaProducer.kafkaSend(employee);
+           kafkaProducer.kafkaSend(employee);
         } catch (Exception e) {
             e.printStackTrace();
         }
