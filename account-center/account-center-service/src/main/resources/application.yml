@@ -3,7 +3,7 @@ logging:
   level:
     com.xspace.ordercenter.dao: debug
 
-  file: /app/deploy/xspace/order-center/logs
+  file: /app/deploy/xspace/account-center/logs
 
 spring:
   profiles:
@@ -64,7 +64,8 @@ spring:
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         properties:
           session.timeout.ms: 15000
-        group-id: cosumer-group2
+        group-id: cosumer-group3
+
 dubbo:
   application:
     name: xspace-order

@@ -1,4 +1,4 @@
-package com.xspace.ordercenter.kafka;
+package com.xspace.accountcenter.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaConsumer {
     public static final Logger logger = LoggerFactory.getLogger(KafkaConsumer.class);
-    @KafkaListener(topics = "atopic")
+    @KafkaListener(topics = {"atopic"})
     public void jktopic(ConsumerRecord consumerRecord) throws InterruptedException {
         System.out.println(consumerRecord.offset());
         logger.info("消费一条记录：{},内容：{}",consumerRecord.offset(),consumerRecord.value().toString());

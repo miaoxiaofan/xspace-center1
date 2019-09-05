@@ -5,6 +5,7 @@ import com.jcraft.jsch.*;
 import com.jcraft.jsch.ChannelSftp.LsEntry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.web.servlet.server.Session;
 import org.springframework.stereotype.Component;
 
 import java.io.*;
@@ -32,7 +33,7 @@ public class SftpClient {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private ChannelSftp sftp = null;
-    private Session sshSession = null;
+    private com.jcraft.jsch.Session sshSession = null;
 
     /*public static void main(String[] args)
     {

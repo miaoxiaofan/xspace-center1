@@ -12,6 +12,8 @@
 	<artifactId>account-center</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-
+		<module>account-center-service</module>
 	</modules>
+
+
 </project>
