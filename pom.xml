@@ -30,7 +30,7 @@
         <java.version>1.8</java.version>
         <dubbo.version>2.6.4</dubbo.version>
         <zkclient.version>0.1</zkclient.version>
-        <apache.zookeeper.version>3.4.8</apache.zookeeper.version>
+        <apache.zookeeper.version>3.4.14</apache.zookeeper.version>
         <alibaba.fastjson.version>1.2.31</alibaba.fastjson.version>
         <springboot.mybatis.version>2.0.1</springboot.mybatis.version>
         <curator-framework.version>2.12.0</curator-framework.version>
