@@ -1,5 +1,8 @@
 package com.xspace.commoncenter.utils;
 
+import org.apache.curator.shaded.com.google.common.io.Files;
+
+import java.util.*;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -37,4 +40,52 @@ public class StrUtil {
         map.get("1");
 
     }
+
+
+    public static void main(String[] args) {
+        Object  gg=new Object();
+        gg.toString();
+
+
+        HashMap map =new HashMap(8);
+
+        map.put(new Student("a1",1),"a1");
+        map.put(new Student("a2",1),"a2");
+        map.put(new Student("a3",1),"a3");
+        map.put(new Student("a4",2),"a4");
+        map.put(new Student("a5",2),"a5");
+        map.put(new Student("a6",2),"a6");
+        map.put(new Student("a7",3),"a7");
+        map.put(new Student("a8",4),"a8");
+        map.put(new Student("a9",5),"a9");
+        map.put(new Student("a10",6),"a10");
+        map.put(new Student("a11",7),"a11");
+        ArrayList  arrayList=new ArrayList<>();
+        arrayList.add(1);
+        LinkedList linkedList=new LinkedList();
+
+
+        LinkedHashMap<String,String> linkedHashMap=new LinkedHashMap<>();
+        linkedHashMap.put("a2","111");
+    }
+
+
+    public  static class Student{
+         private String  name;
+         private int  age;
+         public  Student(String name,int age){
+             this.age=age;
+             this.name=name;
+         }
+        @Override
+        public int hashCode() {
+            return  age;
+        }
+
+        @Override
+        public boolean equals(Object obj) {
+            return super.equals(obj);
+        }
+    }
+
 }
