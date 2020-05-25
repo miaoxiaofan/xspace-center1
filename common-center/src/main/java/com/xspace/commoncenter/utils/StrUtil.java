@@ -1,6 +1,7 @@
 package com.xspace.commoncenter.utils;
 
-import java.util.Random;
+import java.util.*;
+import java.util.function.Predicate;
 
 public class StrUtil {
 
@@ -22,6 +23,18 @@ public class StrUtil {
             sb.append(CHARS[random.nextInt(range)]);
         }
         return sb.toString();
+
+
+
+    }
+
+
+    public  void ttt(){
+        List<String> list=new ArrayList<>();
+         Map<String,String> map=new HashMap<>();
+
+        map.put("","");
+        map.get("1");
 
     }
 }
