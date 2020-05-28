@@ -31,7 +31,7 @@ public  abstract  class TEss {
 
             Vector<String>  a=new Vector<>();
 
-            a.forEach();
+           // a.forEach();
 
         }catch (Exception e){
             e.printStackTrace();
