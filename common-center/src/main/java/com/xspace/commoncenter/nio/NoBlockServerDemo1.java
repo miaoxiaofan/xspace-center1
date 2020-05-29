@@ -66,17 +66,23 @@ public class NoBlockServerDemo1 {
 
                     // 9.2得到文件通道，将客户端传递过来的图片写到本地项目下(写模式、没有则创建)
 
-                    FileChannel outChannel = FileChannel.open(Paths.get("D:\\鬼刀noBlock"+i+".png"), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
+                    FileChannel outChannel = FileChannel.open(Paths.get("D:\\鬼刀noBlock"+(i++)+".png"), StandardOpenOption.WRITE, StandardOpenOption.CREATE);
                     System.out.println("----下载客户端文件--");
-                    while (client.read(buffer) > 0) {
+                    int num=-1;
+                    while ((num=client.read(buffer)) > 0) {
                         // 在读之前都要切换成读模式
                         buffer.flip();
-
                         outChannel.write(buffer);
-
                         // 读完切换成写模式，能让管道继续读取文件的数据
                         buffer.clear();
                     }
+                    //客户端会传给服务端关闭的指令(也就是数据)。而服务端的channel.read(bytebuffer)=-1则代表收到这个关闭指令(数据)
+                    System.out.println("num:"+num);
+                    if(num==-1||num==0){
+                        selectionKey.cancel();
+                        client.close();
+                    }
+
                    // client.close();
                 }
                 // 10. 取消选择键(已经处理过的事件，就应该取消掉了)
