@@ -49,5 +49,6 @@ public class ByteBufferDemo {
         System.out.println("get完之后-->position--->"+byteBuffer.position());
         System.out.println("get完之后-->capacity--->"+byteBuffer.capacity());
         System.out.println("get完之后-->mark--->" + byteBuffer.mark());
+        byteBuffer.compact();
     }
 }
