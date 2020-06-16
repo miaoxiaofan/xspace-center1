@@ -160,7 +160,7 @@ public class SftpClient {
             sftp.cd(remotePathDirName);
             File uploadFile = new File(uploadFileName);
             sftp.put(new FileInputStream(uploadFile), uploadFile.getName());
-            logger.debug("Upload file:{} to remote dir:{}", uploadFileName, remotePathDirName);
+            logger.debug("Upload io:{} to remote dir:{}", uploadFileName, remotePathDirName);
         }catch (FileNotFoundException e) {
             logger.error("Upload remote path({})FileNotFound{}",remotePathDirName, uploadFileName);
         }catch (SftpException e) {           
@@ -186,7 +186,7 @@ public class SftpClient {
         try {
             sftp.cd(remotePathDirName);
 			sftp.put(is, uploadFileName);
-            logger.debug("Upload file:{} to remote dir:{}", uploadFileName, remotePathDirName);
+            logger.debug("Upload io:{} to remote dir:{}", uploadFileName, remotePathDirName);
         }
         catch (SftpException e) {           
             logger.error("download remote path({}) not exists!{}", remotePathDirName, e);
@@ -235,7 +235,7 @@ public class SftpClient {
         }catch (SftpException e) {           
             logger.error("download remote path({}) not exists!{}",remotePathDirName, e);
         } catch (IOException e) {
-        	logger.error("create the file fail;");
+        	logger.error("create the io fail;");
 			//e.printStackTrace();
 		}
     }
@@ -279,7 +279,7 @@ public class SftpClient {
         }
         sftp.cd(directory);
         sftp.rm(deleteFileName);
-        logger.info("Delete file:{} from remote dir:{}", deleteFileName, directory);
+        logger.info("Delete io:{} from remote dir:{}", deleteFileName, directory);
     }
 
     /**

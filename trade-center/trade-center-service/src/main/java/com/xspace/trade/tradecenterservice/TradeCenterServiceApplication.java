@@ -1,0 +1,13 @@
+package com.xspace.trade.tradecenterservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TradeCenterServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(TradeCenterServiceApplication.class, args);
+	}
+
+}
