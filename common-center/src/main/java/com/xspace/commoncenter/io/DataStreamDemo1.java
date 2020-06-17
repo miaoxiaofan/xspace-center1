@@ -1,4 +1,4 @@
-package com.xspace.commoncenter.file;
+package com.xspace.commoncenter.io;
 
 import java.io.*;
 
