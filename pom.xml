@@ -31,7 +31,7 @@
         <dubbo.version>2.6.4</dubbo.version>
         <zkclient.version>0.1</zkclient.version>
         <apache.zookeeper.version>3.4.8</apache.zookeeper.version>
-        <alibaba.fastjson.version>1.2.31</alibaba.fastjson.version>
+        <alibaba.fastjson.version>1.2.83</alibaba.fastjson.version>
         <springboot.mybatis.version>2.0.1</springboot.mybatis.version>
         <curator-framework.version>2.12.0</curator-framework.version>
         <com.github.pagehelper.version>1.2.5</com.github.pagehelper.version>
